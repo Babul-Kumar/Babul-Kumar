@@ -244,20 +244,9 @@ WORKSPACE & HARDWARE:
 
 ---
 
-### 09 // CONTRIBUTION ACTIVITY
+### 09 // CONTRIBUTION GRAPH & SNAKE
 
 <div align="center">
-  <p><b>52-WEEK ROLLING CONTRIBUTION HEATMAP</b></p>
-  <img src="./assets/contribution-activity.svg" alt="Contribution Activity Heatmap" width="100%" />
-</div>
-
----
-
-### 10 // CONTRIBUTION SNAKE
-
-<div align="center">
-  <p><b>AUTOMATED CONTRIBUTION GRAPH SNAKE</b></p>
-
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="./assets/github-contribution-snake-dark.svg" />
     <source media="(prefers-color-scheme: light)" srcset="./assets/github-contribution-snake.svg" />
@@ -267,7 +256,7 @@ WORKSPACE & HARDWARE:
 
 ---
 
-### 11 // LET'S TALK & COLLABORATE
+### 10 // LET'S TALK & COLLABORATE
 
 Whether you want to discuss computer vision pipelines, background system daemons, machine learning systems, or collaborate on open-source software:
 
