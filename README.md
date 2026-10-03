@@ -16,44 +16,21 @@
 
 ## About
 
-Computer Science & Engineering student building AI/ML systems and full-stack software. I focus on understanding systems from first principles and turning practical ideas into working code.
+I'm a Computer Science & Engineering student interested in AI/ML and full-stack software development.  
+I enjoy turning ideas into working software and experimenting with systems, automation, and intelligent applications.
 
-**Currently building:** Real-time computer vision models · lightweight system daemons · responsive web tools
-
-## Featured
-
-<table width="100%">
-<tr>
-<td width="50%" valign="top">
-
-### [Emotion-age-detector](https://github.com/Babul-kumar/Emotion-age-detector)
-
-Real-time facial perception for emotion classification and age estimation using neural networks.
-
-`Python` `OpenCV` `Deep Learning`
-
-[View repository](https://github.com/Babul-kumar/Emotion-age-detector)
-
-</td>
-<td width="50%" valign="top">
-
-### [smart-system-monitor](https://github.com/Babul-kumar/smart-system-monitor)
-
-Low-overhead host telemetry suite paired with an automated daemon bot for real-time alerts.
-
-`Python` `System Diagnostics` `Automation`
-
-[View repository](https://github.com/Babul-kumar/smart-system-monitor)
-
-</td>
-</tr>
-</table>
+**Currently building:** AI/ML systems · Full-stack applications · Developer tools · Automation
 
 ## Stack
 
-**Languages:** Python · TypeScript · JavaScript · Java · C / C++ · SQL  
-**AI / ML:** OpenCV · Deep Learning · Neural Networks · Scikit-learn  
-**Development & Tools:** React · Node.js · Linux · Git · REST APIs
+**Languages**  
+Python · Java · JavaScript · TypeScript · C/C++ · SQL
+
+**AI / ML**  
+Scikit-learn · OpenCV · Neural Networks · Deep Learning
+
+**Development**  
+React · Node.js · Vite · Git · Linux
 
 ---
 
