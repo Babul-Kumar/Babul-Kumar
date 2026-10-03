@@ -1,10 +1,10 @@
-import os
+import os, json
 import xml.etree.ElementTree as ET
 
 os.makedirs('assets/cards', exist_ok=True)
 
 # -------------------------------------------------------------
-# 1. card-mailmind.svg (AI Email Priority & Classification)
+# 1. card-mailmind.svg
 # -------------------------------------------------------------
 card_mailmind = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 110" width="100%" height="110" fill="none">
   <defs>
@@ -93,7 +93,7 @@ with open('assets/cards/card-mailmind.svg', 'w', encoding='utf-8') as f:
     f.write(card_mailmind)
 
 # -------------------------------------------------------------
-# 2. card-emotion.svg (Emotion & Age Detector)
+# 2. card-emotion.svg (Emotion & Age Detector - No fake metrics)
 # -------------------------------------------------------------
 card_emotion = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 110" width="100%" height="110" fill="none">
   <defs>
@@ -164,7 +164,7 @@ card_emotion = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 110" 
 
     <!-- Scanning Reticle Line -->
     <line x1="-20" y1="0" x2="20" y2="0" stroke="#38EF7D" stroke-width="1.2" class="reticle-line"/>
-    <text x="0" y="32" text-anchor="middle" font-family="'SF Mono', Consolas, monospace" font-size="8" fill="#38EF7D">CONF: 98.4%</text>
+    <text x="0" y="32" text-anchor="middle" font-family="'SF Mono', Consolas, monospace" font-size="8" fill="#38EF7D" letter-spacing="1px">REAL-TIME CV</text>
   </g>
 </svg>"""
 
@@ -242,7 +242,7 @@ with open('assets/cards/card-monitor.svg', 'w', encoding='utf-8') as f:
     f.write(card_monitor)
 
 # -------------------------------------------------------------
-# 4. card-steganography.svg (Steganography Image Carrier)
+# 4. card-steganography.svg (Steganography)
 # -------------------------------------------------------------
 card_steg = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 110" width="100%" height="110" fill="none">
   <defs>
@@ -261,10 +261,6 @@ card_steg = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 110" wid
     @keyframes bitPulse {
       0%, 100% { opacity: 0.2; }
       50% { opacity: 0.9; }
-    }
-    @keyframes keyRotate {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
     }
     .bit-cell-1 { animation: bitPulse 1.8s ease-in-out infinite; }
     .bit-cell-2 { animation: bitPulse 2.4s ease-in-out infinite 0.6s; }
@@ -308,7 +304,7 @@ with open('assets/cards/card-steganography.svg', 'w', encoding='utf-8') as f:
     f.write(card_steg)
 
 # -------------------------------------------------------------
-# 5. card-virtualmemory.svg (Virtual Memory Paging Simulator)
+# 5. card-virtualmemory.svg (Virtual Memory Simulator)
 # -------------------------------------------------------------
 card_vm = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 110" width="100%" height="110" fill="none">
   <defs>
@@ -369,70 +365,131 @@ with open('assets/cards/card-virtualmemory.svg', 'w', encoding='utf-8') as f:
     f.write(card_vm)
 
 # -------------------------------------------------------------
-# 6. card-prometheus.svg (Prometheus EBM SDK)
+# 6. assets/journey.svg (FIXED OVERLAP & ZERO FAKE CONTENT)
 # -------------------------------------------------------------
-card_prom = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 110" width="100%" height="110" fill="none">
+# Total width = 1200, height = 240
+# 3 equal regions:
+# Region 1 (2024): center at x=230, text bounded in [60, 400]
+# Region 2 (2025): center at x=600, text bounded in [430, 770]
+# Region 3 (2026): center at x=970, text bounded in [800, 1140]
+# 40px clear gap between regions prevents any text collision!
+journey_svg = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 240" width="100%" height="240" fill="none">
   <defs>
-    <linearGradient id="prBg" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="journeyBg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#070B10"/>
-      <stop offset="50%" stop-color="#120F16"/>
-      <stop offset="100%" stop-color="#18131E"/>
+      <stop offset="50%" stop-color="#090E17"/>
+      <stop offset="100%" stop-color="#0C1320"/>
     </linearGradient>
-    <linearGradient id="prAccent" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#FFA657"/>
-      <stop offset="100%" stop-color="#FF7B72"/>
+
+    <linearGradient id="journeyLineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D2FF" stop-opacity="0.4"/>
+      <stop offset="50%" stop-color="#38EF7D"/>
+      <stop offset="100%" stop-color="#BD5FFF"/>
     </linearGradient>
+
+    <filter id="nodeGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
   </defs>
 
   <style>
-    @keyframes dialSweep {
-      0% { transform: rotate(-30deg); }
-      50% { transform: rotate(30deg); }
-      100% { transform: rotate(-30deg); }
+    @keyframes trackPulse {
+      0% { stroke-dashoffset: 800; }
+      100% { stroke-dashoffset: 0; }
     }
-    .gauge-needle {
-      transform-origin: 350px 65px;
-      animation: dialSweep 4s ease-in-out infinite;
+    @keyframes pulseRing {
+      0%, 100% { r: 6px; opacity: 0.7; }
+      50% { r: 10px; opacity: 1; filter: drop-shadow(0 0 5px #00D2FF); }
     }
+    .track-active {
+      stroke-dasharray: 40 80;
+      animation: trackPulse 7s linear infinite;
+    }
+    .node-pulse-1 { animation: pulseRing 3s ease-in-out infinite; }
+    .node-pulse-2 { animation: pulseRing 3s ease-in-out infinite 1s; }
+    .node-pulse-3 { animation: pulseRing 3s ease-in-out infinite 2s; }
   </style>
 
-  <rect x="1" y="1" width="418" height="108" rx="10" fill="url(#prBg)" stroke="#21262D" stroke-width="1.2"/>
-  <line x1="1" y1="1" x2="419" y2="1" stroke="url(#prAccent)" stroke-width="2.5" stroke-linecap="round"/>
+  <!-- Container Box -->
+  <rect x="1" y="1" width="1198" height="238" rx="12" fill="url(#journeyBg)" stroke="#21262D" stroke-width="1.2"/>
 
-  <!-- Left Content -->
-  <g transform="translate(22, 0)">
-    <text x="0" y="32" font-family="'SF Mono', 'Segoe UI Mono', Consolas, monospace" font-size="11" font-weight="700" fill="#FFA657" letter-spacing="1.5px">06 // AI EVALUATION &amp; BENCHMARKING</text>
-    <text x="0" y="60" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="19" font-weight="800" fill="#F0F6FC" letter-spacing="1.2px">prometheus-ebm-sdk</text>
-    <text x="0" y="78" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="500" fill="#8B949E" letter-spacing="0.2px">Epistemic Metacognition Calibration Benchmark Toolkit</text>
-    <g transform="translate(0, 92)">
-      <text font-family="'SF Mono', Consolas, monospace" font-size="9" font-weight="600" fill="#FFA657">PYTHON</text>
-      <text x="44" font-family="sans-serif" font-size="9" fill="#484F58">•</text>
-      <text x="56" font-family="'SF Mono', Consolas, monospace" font-size="9" fill="#8B949E">BENCHMARKING</text>
-      <text x="150" font-family="sans-serif" font-size="9" fill="#484F58">•</text>
-      <text x="162" font-family="'SF Mono', Consolas, monospace" font-size="9" fill="#8B949E">METRIC SUITE</text>
-    </g>
+  <!-- Top Title Header -->
+  <g transform="translate(30, 32)">
+    <text x="0" y="0" font-family="'SF Mono', Consolas, monospace" font-size="10" font-weight="700" fill="#00D2FF" letter-spacing="1.5px">02 // PROGRESSION TIMELINE</text>
+    <text x="1140" y="0" text-anchor="end" font-family="'SF Mono', Consolas, monospace" font-size="9" fill="#8B949E" letter-spacing="1px">CHRONO-SERIES // 2024 - 2026</text>
   </g>
 
-  <!-- Right Graphic: Epistemic Calibration Gauge -->
-  <g>
-    <circle cx="350" cy="55" r="38" fill="#FFA657" fill-opacity="0.03"/>
-    <path d="M 322 65 A 32 32 0 1 1 378 65" stroke="#251F2A" stroke-width="3" fill="none"/>
-    <path d="M 322 65 A 32 32 0 0 1 350 33" stroke="#FFA657" stroke-width="3" fill="none" stroke-linecap="round"/>
-    
-    <!-- Calibration Needle -->
-    <g class="gauge-needle">
-      <line x1="350" y1="65" x2="350" y2="40" stroke="#FF7B72" stroke-width="2" stroke-linecap="round"/>
-      <circle cx="350" cy="65" r="4" fill="#FFA657"/>
-    </g>
-    <text x="350" y="78" text-anchor="middle" font-family="'SF Mono', Consolas, monospace" font-size="8" fill="#FFA657">ECE: 0.042</text>
+  <!-- Base Track Line -->
+  <line x1="120" y1="85" x2="1080" y2="85" stroke="#1D2633" stroke-width="2"/>
+  <line x1="120" y1="85" x2="1080" y2="85" stroke="url(#journeyLineGrad)" stroke-width="2.5" stroke-linecap="round" class="track-active"/>
+
+  <!-- ==================== MILESTONE 1: 2024 (Center: 230) ==================== -->
+  <g transform="translate(230, 0)">
+    <!-- Year Badge -->
+    <rect x="-32" y="46" width="64" height="22" rx="4" fill="#0E1622" stroke="#00D2FF" stroke-width="1.2"/>
+    <text x="0" y="61" text-anchor="middle" font-family="'SF Mono', Consolas, monospace" font-size="11" font-weight="700" fill="#00D2FF">2024</text>
+
+    <!-- Node Ring on Track -->
+    <circle cx="0" cy="85" r="16" fill="#0D131C" stroke="#21262D" stroke-width="1.5"/>
+    <circle cx="0" cy="85" r="6" fill="#00D2FF" class="node-pulse-1" filter="url(#nodeGlow)"/>
+
+    <!-- Connector to content -->
+    <line x1="0" y1="101" x2="0" y2="114" stroke="#00D2FF" stroke-width="1" stroke-dasharray="2 2"/>
+
+    <!-- Milestone Content -->
+    <text x="0" y="132" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#F0F6FC" letter-spacing="1px">FOUNDATIONS</text>
+    <text x="0" y="156" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#8B949E">Core computer science fundamentals,</text>
+    <text x="0" y="174" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#8B949E">data structures, &amp; algorithms.</text>
+    <text x="0" y="202" text-anchor="middle" font-family="'SF Mono', Consolas, monospace" font-size="9.5" font-weight="600" fill="#00D2FF">C / C++ • ALGORITHMS • CS DEGREE</text>
+  </g>
+
+  <!-- ==================== MILESTONE 2: 2025 (Center: 600) ==================== -->
+  <g transform="translate(600, 0)">
+    <!-- Year Badge -->
+    <rect x="-32" y="46" width="64" height="22" rx="4" fill="#0E1622" stroke="#38EF7D" stroke-width="1.2"/>
+    <text x="0" y="61" text-anchor="middle" font-family="'SF Mono', Consolas, monospace" font-size="11" font-weight="700" fill="#38EF7D">2025</text>
+
+    <!-- Node Ring on Track -->
+    <circle cx="0" cy="85" r="16" fill="#0D131C" stroke="#21262D" stroke-width="1.5"/>
+    <circle cx="0" cy="85" r="6" fill="#38EF7D" class="node-pulse-2" filter="url(#nodeGlow)"/>
+
+    <!-- Connector to content -->
+    <line x1="0" y1="101" x2="0" y2="114" stroke="#38EF7D" stroke-width="1" stroke-dasharray="2 2"/>
+
+    <!-- Milestone Content -->
+    <text x="0" y="132" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#F0F6FC" letter-spacing="1px">AI / ML + SYSTEMS</text>
+    <text x="0" y="156" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#8B949E">Computer vision, hardware telemetry,</text>
+    <text x="0" y="174" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#8B949E">automation daemons, &amp; memory paging.</text>
+    <text x="0" y="202" text-anchor="middle" font-family="'SF Mono', Consolas, monospace" font-size="9.5" font-weight="600" fill="#38EF7D">OPENCV • CNN • PSUTIL • PAGING</text>
+  </g>
+
+  <!-- ==================== MILESTONE 3: 2026 (Center: 970) ==================== -->
+  <g transform="translate(970, 0)">
+    <!-- Year Badge -->
+    <rect x="-42" y="46" width="84" height="22" rx="4" fill="#130E20" stroke="#BD5FFF" stroke-width="1.2"/>
+    <text x="0" y="61" text-anchor="middle" font-family="'SF Mono', Consolas, monospace" font-size="11" font-weight="700" fill="#BD5FFF">2026 // NOW</text>
+
+    <!-- Node Ring on Track -->
+    <circle cx="0" cy="85" r="16" fill="#0D131C" stroke="#21262D" stroke-width="1.5"/>
+    <circle cx="0" cy="85" r="6" fill="#BD5FFF" class="node-pulse-3" filter="url(#nodeGlow)"/>
+
+    <!-- Connector to content -->
+    <line x1="0" y1="101" x2="0" y2="114" stroke="#BD5FFF" stroke-width="1" stroke-dasharray="2 2"/>
+
+    <!-- Milestone Content -->
+    <text x="0" y="132" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#F0F6FC" letter-spacing="1px">FULL-STACK + AI TOOLING</text>
+    <text x="0" y="156" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#8B949E">Building intelligent applications, developer tools,</text>
+    <text x="0" y="174" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#8B949E">inbox automation, &amp; full-stack systems.</text>
+    <text x="0" y="202" text-anchor="middle" font-family="'SF Mono', Consolas, monospace" font-size="9.5" font-weight="600" fill="#BD5FFF">MAILMIND • STEGANOGRAPHY • REACT</text>
   </g>
 </svg>"""
 
-with open('assets/cards/card-prometheus.svg', 'w', encoding='utf-8') as f:
-    f.write(card_prom)
+with open('assets/journey.svg', 'w', encoding='utf-8') as f:
+    f.write(journey_svg)
 
 # -------------------------------------------------------------
-# 7. assets/workflow-pipeline.svg (Idea to Impact)
+# 7. assets/workflow-pipeline.svg
 # -------------------------------------------------------------
 pipeline_svg = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 110" width="100%" height="110" fill="none">
   <defs>
@@ -445,7 +502,7 @@ pipeline_svg = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 110" 
       <stop offset="50%" stop-color="#00D2FF"/>
       <stop offset="100%" stop-color="#38EF7D"/>
     </linearGradient>
-    <filter id="nodeGlow" x="-20%" y="-20%" width="140%" height="140%">
+    <filter id="pipeNodeGlow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="3" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
@@ -484,7 +541,7 @@ pipeline_svg = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 110" 
   <!-- Node 1: EXPLORE -->
   <g transform="translate(70, 55)">
     <circle cx="0" cy="0" r="18" fill="#121820" stroke="#30363D" stroke-width="1.5"/>
-    <circle cx="0" cy="0" r="6" fill="#00D2FF" filter="url(#nodeGlow)"/>
+    <circle cx="0" cy="0" r="6" fill="#00D2FF" filter="url(#pipeNodeGlow)"/>
     <text x="0" y="-28" text-anchor="middle" class="stage-num">01</text>
     <text x="0" y="36" text-anchor="middle" class="stage-title">EXPLORE</text>
   </g>
@@ -500,7 +557,7 @@ pipeline_svg = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 110" 
   <!-- Node 3: BUILD -->
   <g transform="translate(366, 55)">
     <circle cx="0" cy="0" r="18" fill="#121820" stroke="#00D2FF" stroke-width="1.5"/>
-    <circle cx="0" cy="0" r="6" fill="#00D2FF" filter="url(#nodeGlow)"/>
+    <circle cx="0" cy="0" r="6" fill="#00D2FF" filter="url(#pipeNodeGlow)"/>
     <text x="0" y="-28" text-anchor="middle" class="stage-num">03</text>
     <text x="0" y="36" text-anchor="middle" class="stage-title">BUILD</text>
   </g>
@@ -524,7 +581,7 @@ pipeline_svg = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 110" 
   <!-- Node 6: ITERATE -->
   <g transform="translate(810, 55)">
     <circle cx="0" cy="0" r="18" fill="#121820" stroke="#38EF7D" stroke-width="1.5"/>
-    <circle cx="0" cy="0" r="6" fill="#38EF7D" filter="url(#nodeGlow)"/>
+    <circle cx="0" cy="0" r="6" fill="#38EF7D" filter="url(#pipeNodeGlow)"/>
     <text x="0" y="-28" text-anchor="middle" class="stage-num" fill="#38EF7D">06</text>
     <text x="0" y="36" text-anchor="middle" class="stage-title" fill="#38EF7D">ITERATE</text>
   </g>
@@ -534,7 +591,7 @@ with open('assets/workflow-pipeline.svg', 'w', encoding='utf-8') as f:
     f.write(pipeline_svg)
 
 # -------------------------------------------------------------
-# 8. assets/build-cycle.svg (Engineering Cycle)
+# 8. assets/build-cycle.svg
 # -------------------------------------------------------------
 cycle_svg = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 110" width="100%" height="110" fill="none">
   <defs>
@@ -623,4 +680,4 @@ cycle_svg = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 110" wid
 with open('assets/build-cycle.svg', 'w', encoding='utf-8') as f:
     f.write(cycle_svg)
 
-print("Generated all cards and cycle SVGs successfully!")
+print("Generated clean, verified assets successfully!")

@@ -560,64 +560,73 @@ journey_svg = '''<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 210" 
       
       .pulse-glow { animation: pulseAnim 2.5s infinite; }
 
-      @keyframes drawLine {
-        to { stroke-dashoffset: 0; }
+      @keyframes trackPulse {
+        0% { stroke-dashoffset: 800; }
+        100% { stroke-dashoffset: 0; }
       }
-      @keyframes nodePop {
-        0% { opacity: 0; transform: translateY(6px); }
-        100% { opacity: 1; transform: translateY(0); }
+      @keyframes pulseRing {
+        0%, 100% { r: 6px; opacity: 0.7; }
+        50% { r: 10px; opacity: 1; filter: drop-shadow(0 0 5px #00D2FF); }
       }
-      @keyframes pulseAnim {
-        0%, 100% { r: 5; opacity: 1; }
-        50% { r: 8; opacity: 0.4; }
+      .track-active {
+        stroke-dasharray: 40 80;
+        animation: trackPulse 7s linear infinite;
       }
+      .node-pulse-1 { animation: pulseRing 3s ease-in-out infinite; }
+      .node-pulse-2 { animation: pulseRing 3s ease-in-out infinite 1s; }
+      .node-pulse-3 { animation: pulseRing 3s ease-in-out infinite 2s; }
     ]]></style>
   </defs>
 
-  <rect width="1200" height="210" fill="#090C11" />
-  <rect x="36" y="16" width="1128" height="178" rx="6" fill="#0C1017" stroke="#1E293B" stroke-width="1" />
+  <rect x="1" y="1" width="1198" height="238" rx="12" fill="#070B10" stroke="#21262D" stroke-width="1.2"/>
 
-  <!-- Technical Header -->
-  <text x="56" y="38" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="9" letter-spacing="1.5">02 // PROGRESSION TIMELINE &amp; ARCHITECTURAL MILESTONES</text>
-  <text x="1144" y="38" text-anchor="end" fill="#00E5FF" font-family="'JetBrains Mono', monospace" font-size="9">CHRONO-SERIES // 2024 - 2026</text>
+  <!-- Top Title Header -->
+  <g transform="translate(30, 32)">
+    <text x="0" y="0" font-family="'SF Mono', Consolas, monospace" font-size="10" font-weight="700" fill="#00D2FF" letter-spacing="1.5px">02 // PROGRESSION TIMELINE</text>
+    <text x="1140" y="0" text-anchor="end" font-family="'SF Mono', Consolas, monospace" font-size="9" fill="#8B949E" letter-spacing="1px">CHRONO-SERIES // 2024 - 2026</text>
+  </g>
 
-  <!-- Horizontal Axis Line -->
-  <line class="timeline-base" x1="80" y1="84" x2="1120" y2="84" stroke="url(#lineGrad)" stroke-width="2" />
+  <!-- Base Track Line -->
+  <line x1="120" y1="85" x2="1080" y2="85" stroke="#1D2633" stroke-width="2"/>
+  <line x1="120" y1="85" x2="1080" y2="85" stroke="url(#lineGrad)" stroke-width="2.5" stroke-linecap="round" class="track-active"/>
 
   <!-- MILESTONE 1: 2024 -->
-  <g class="node-1" transform="translate(140, 0)">
-    <line x1="0" y1="84" x2="0" y2="70" stroke="#00E5FF" stroke-width="1" stroke-dasharray="2 2" />
-    <circle cx="0" cy="84" r="5" fill="#00E5FF" />
-    <circle class="pulse-glow" cx="0" cy="84" r="6" fill="none" stroke="#00E5FF" stroke-width="1.5" />
-    <text x="0" y="62" text-anchor="middle" fill="#00E5FF" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">2024</text>
-    
-    <text x="0" y="112" text-anchor="middle" fill="#F1F5F9" font-size="13" font-weight="600">Foundations &amp; First Repositories</text>
-    <text x="0" y="130" text-anchor="middle" fill="#94A3B8" font-size="11">Computer Science &amp; Engineering journey begins</text>
-    <text x="0" y="146" text-anchor="middle" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="10">Core Algorithms &#8226; C/C++ &#8226; Basic Web Utilities</text>
+  <g transform="translate(230, 0)">
+    <rect x="-32" y="46" width="64" height="22" rx="4" fill="#0E1622" stroke="#00D2FF" stroke-width="1.2"/>
+    <text x="0" y="61" text-anchor="middle" font-family="'SF Mono', Consolas, monospace" font-size="11" font-weight="700" fill="#00D2FF">2024</text>
+    <circle cx="0" cy="85" r="16" fill="#0D131C" stroke="#21262D" stroke-width="1.5"/>
+    <circle cx="0" cy="85" r="6" fill="#00D2FF" class="node-pulse-1"/>
+    <line x1="0" y1="101" x2="0" y2="114" stroke="#00D2FF" stroke-width="1" stroke-dasharray="2 2"/>
+    <text x="0" y="132" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#F0F6FC" letter-spacing="1px">FOUNDATIONS</text>
+    <text x="0" y="156" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#8B949E">Core computer science fundamentals,</text>
+    <text x="0" y="174" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#8B949E">data structures, &amp; algorithms.</text>
+    <text x="0" y="202" text-anchor="middle" font-family="'SF Mono', Consolas, monospace" font-size="9.5" font-weight="600" fill="#00D2FF">C / C++ • ALGORITHMS • CS DEGREE</text>
   </g>
 
   <!-- MILESTONE 2: 2025 -->
-  <g class="node-2" transform="translate(560, 0)">
-    <line x1="0" y1="84" x2="0" y2="70" stroke="#38BDF8" stroke-width="1" stroke-dasharray="2 2" />
-    <circle cx="0" cy="84" r="5" fill="#38BDF8" />
-    <circle class="pulse-glow" cx="0" cy="84" r="6" fill="none" stroke="#38BDF8" stroke-width="1.5" />
-    <text x="0" y="62" text-anchor="middle" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">2025</text>
-    
-    <text x="0" y="112" text-anchor="middle" fill="#F1F5F9" font-size="13" font-weight="600">Systems, Simulators &amp; Cryptography</text>
-    <text x="0" y="130" text-anchor="middle" fill="#94A3B8" font-size="11">Steganography encoder, OS Virtual Memory &amp; PageSim</text>
-    <text x="0" y="146" text-anchor="middle" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="10">TypeScript &#8226; Canvas API &#8226; OS Paging Simulators</text>
+  <g transform="translate(600, 0)">
+    <rect x="-32" y="46" width="64" height="22" rx="4" fill="#0E1622" stroke="#38EF7D" stroke-width="1.2"/>
+    <text x="0" y="61" text-anchor="middle" font-family="'SF Mono', Consolas, monospace" font-size="11" font-weight="700" fill="#38EF7D">2025</text>
+    <circle cx="0" cy="85" r="16" fill="#0D131C" stroke="#21262D" stroke-width="1.5"/>
+    <circle cx="0" cy="85" r="6" fill="#38EF7D" class="node-pulse-2"/>
+    <line x1="0" y1="101" x2="0" y2="114" stroke="#38EF7D" stroke-width="1" stroke-dasharray="2 2"/>
+    <text x="0" y="132" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#F0F6FC" letter-spacing="1px">AI / ML + SYSTEMS</text>
+    <text x="0" y="156" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#8B949E">Computer vision, hardware telemetry,</text>
+    <text x="0" y="174" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#8B949E">automation daemons, &amp; memory paging.</text>
+    <text x="0" y="202" text-anchor="middle" font-family="'SF Mono', Consolas, monospace" font-size="9.5" font-weight="600" fill="#38EF7D">OPENCV • CNN • PSUTIL • PAGING</text>
   </g>
 
   <!-- MILESTONE 3: 2026 -->
-  <g class="node-3" transform="translate(980, 0)">
-    <line x1="0" y1="84" x2="0" y2="70" stroke="#6366F1" stroke-width="1" stroke-dasharray="2 2" />
-    <circle cx="0" cy="84" r="5" fill="#6366F1" />
-    <circle class="pulse-glow" cx="0" cy="84" r="6" fill="none" stroke="#6366F1" stroke-width="1.5" />
-    <text x="0" y="62" text-anchor="middle" fill="#818CF8" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">2026 // ACTIVE</text>
-    
-    <text x="0" y="112" text-anchor="middle" fill="#F1F5F9" font-size="13" font-weight="600">AI Perception &amp; Telemetry Daemons</text>
-    <text x="0" y="130" text-anchor="middle" fill="#94A3B8" font-size="11">220+ contributions: Emotion detector &amp; System Bot</text>
-    <text x="0" y="146" text-anchor="middle" fill="#818CF8" font-family="'JetBrains Mono', monospace" font-size="10">Python &#8226; OpenCV &#8226; CNNs &#8226; Prometheus-EBM SDK</text>
+  <g transform="translate(970, 0)">
+    <rect x="-42" y="46" width="84" height="22" rx="4" fill="#130E20" stroke="#BD5FFF" stroke-width="1.2"/>
+    <text x="0" y="61" text-anchor="middle" font-family="'SF Mono', Consolas, monospace" font-size="11" font-weight="700" fill="#BD5FFF">2026 // NOW</text>
+    <circle cx="0" cy="85" r="16" fill="#0D131C" stroke="#21262D" stroke-width="1.5"/>
+    <circle cx="0" cy="85" r="6" fill="#BD5FFF" class="node-pulse-3"/>
+    <line x1="0" y1="101" x2="0" y2="114" stroke="#BD5FFF" stroke-width="1" stroke-dasharray="2 2"/>
+    <text x="0" y="132" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="700" fill="#F0F6FC" letter-spacing="1px">FULL-STACK + AI TOOLING</text>
+    <text x="0" y="156" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#8B949E">Building intelligent applications, developer tools,</text>
+    <text x="0" y="174" text-anchor="middle" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" fill="#8B949E">inbox automation, &amp; full-stack systems.</text>
+    <text x="0" y="202" text-anchor="middle" font-family="'SF Mono', Consolas, monospace" font-size="9.5" font-weight="600" fill="#BD5FFF">MAILMIND • STEGANOGRAPHY • REACT</text>
   </g>
 </svg>
 '''

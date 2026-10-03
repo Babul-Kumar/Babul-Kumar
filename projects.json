@@ -1,0 +1,91 @@
+[
+  {
+    "id": "01",
+    "name": "MailMind",
+    "title": "MailMind",
+    "category": "01 // INTELLIGENCE",
+    "tagline": "AI Email Priority Scoring & Classification Engine",
+    "description": "AI email priority classification and inbox intelligence engine powered by NLP deep learning pipelines.",
+    "stack": [
+      "Python",
+      "NLP",
+      "Deep Learning",
+      "Classification"
+    ],
+    "technologies_str": "PYTHON • NLP PIPELINE • DEEP LEARNING",
+    "repo_url": "https://github.com/Babul-Kumar/MailMind",
+    "card_svg": "assets/cards/card-mailmind.svg",
+    "fork": false
+  },
+  {
+    "id": "02",
+    "name": "Emotion-age-detector",
+    "title": "Emotion-Age Detector",
+    "category": "02 // COMPUTER VISION",
+    "tagline": "Real-Time Facial Landmark & Emotion Inference",
+    "description": "Real-time computer vision perception pipeline for facial emotion recognition and age estimation.",
+    "stack": [
+      "Python",
+      "OpenCV",
+      "CNN Inference",
+      "Computer Vision"
+    ],
+    "technologies_str": "OPENCV • CNN INFERENCE • PYTHON",
+    "repo_url": "https://github.com/Babul-Kumar/Emotion-age-detector",
+    "card_svg": "assets/cards/card-emotion.svg",
+    "fork": false
+  },
+  {
+    "id": "03",
+    "name": "smart-system-monitor",
+    "title": "smart-system-monitor",
+    "category": "03 // TELEMETRY & DAEMONS",
+    "tagline": "Cross-Platform Hardware Diagnostics & Daemon Bot",
+    "description": "Lightweight cross-platform telemetry daemon and Telegram notification bot for CPU, RAM, and hardware diagnostics.",
+    "stack": [
+      "Python",
+      "psutil",
+      "Telegram Bot API",
+      "Daemons"
+    ],
+    "technologies_str": "PYTHON • PSUTIL • TELEGRAM BOT API",
+    "repo_url": "https://github.com/Babul-Kumar/smart-system-monitor",
+    "card_svg": "assets/cards/card-monitor.svg",
+    "fork": false
+  },
+  {
+    "id": "04",
+    "name": "Steganography-",
+    "title": "Steganography-",
+    "category": "04 // CRYPTOGRAPHY & SECURITY",
+    "tagline": "Cryptographic Least Significant Bit (LSB) Carrier Tool",
+    "description": "Cryptographic Least Significant Bit (LSB) carrier tool encoding encrypted payloads inside lossless image canvas pixels.",
+    "stack": [
+      "TypeScript",
+      "Canvas API",
+      "Cryptography",
+      "Security"
+    ],
+    "technologies_str": "TYPESCRIPT • CANVAS PIXELS • LSB ENCRYPTION",
+    "repo_url": "https://github.com/Babul-Kumar/Steganography-",
+    "card_svg": "assets/cards/card-steganography.svg",
+    "fork": false
+  },
+  {
+    "id": "05",
+    "name": "Virtual-Memory-Simulator",
+    "title": "Virtual-Memory-Simulator",
+    "category": "05 // OPERATING SYSTEMS",
+    "tagline": "FIFO, LRU, & Optimal OS Paging Replacement Engine",
+    "description": "Interactive operating systems memory manager implementing FIFO, LRU, and Optimal paging replacement algorithms.",
+    "stack": [
+      "JavaScript",
+      "OS Architecture",
+      "Paging Algorithms"
+    ],
+    "technologies_str": "JAVASCRIPT • PAGING ALGORITHMS • SIMULATION",
+    "repo_url": "https://github.com/Babul-Kumar/Virtual-Memory-Simulator",
+    "card_svg": "assets/cards/card-virtualmemory.svg",
+    "fork": false
+  }
+]

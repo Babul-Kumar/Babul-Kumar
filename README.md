@@ -54,8 +54,8 @@ My engineering journey centers around turning complex ideas into clean, function
 </div>
 
 - **2024 · Foundations:** Core algorithms, data structures, and foundational systems programming; understanding OS memory allocation and basic computing architecture.
-- **2025 · Applied ML & Systems:** Developing real-time computer vision engines (OpenCV, CNNs), hardware telemetry daemons (`smart-system-monitor`), and interactive paging algorithms.
-- **2026 · Full-Stack & Tooling:** Architecting intelligent inbox automation (`MailMind`), epistemic evaluation SDKs (`prometheus-ebm-sdk`), and cryptographic steganography carriers.
+- **2025 · Applied ML & Systems:** Developing real-time computer vision engines (OpenCV, CNNs), hardware telemetry daemons (`smart-system-monitor`), and interactive paging algorithms (`Virtual-Memory-Simulator`).
+- **2026 · Full-Stack & AI Tooling:** Building intelligent applications, inbox intelligence (`MailMind`), cryptographic image carriers (`Steganography-`), and developer productivity systems.
 
 ---
 
@@ -156,7 +156,7 @@ Cryptographic Least Significant Bit (LSB) carrier tool encoding encrypted payloa
 </td>
 </tr>
 <tr>
-<td width="50%" valign="top">
+<td colspan="2" valign="top">
 
 <a href="https://github.com/Babul-Kumar/Virtual-Memory-Simulator">
   <img src="assets/cards/card-virtualmemory.svg" alt="05 Virtual-Memory-Simulator Card" width="100%" />
@@ -166,18 +166,6 @@ Cryptographic Least Significant Bit (LSB) carrier tool encoding encrypted payloa
 Interactive operating systems memory manager implementing FIFO, LRU, and Optimal paging replacement algorithms.  
 `Stack: JavaScript • OS Architecture • Paging Algorithms`  
 🔗 **[View Repository](https://github.com/Babul-Kumar/Virtual-Memory-Simulator)**
-
-</td>
-<td width="50%" valign="top">
-
-<a href="https://github.com/Babul-Kumar/prometheus-ebm-sdk">
-  <img src="assets/cards/card-prometheus.svg" alt="06 prometheus-ebm-sdk Card" width="100%" />
-</a>
-
-**06 / prometheus-ebm-sdk**  
-Epistemic Metacognition & Evaluation benchmark SDK for measuring model confidence calibration and expected calibration error.  
-`Stack: Python • Benchmarking • Metric Suites • AI Evaluation`  
-🔗 **[View Repository](https://github.com/Babul-Kumar/prometheus-ebm-sdk)**
 
 </td>
 </tr>

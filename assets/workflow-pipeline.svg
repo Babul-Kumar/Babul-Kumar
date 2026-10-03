@@ -9,7 +9,7 @@
       <stop offset="50%" stop-color="#00D2FF"/>
       <stop offset="100%" stop-color="#38EF7D"/>
     </linearGradient>
-    <filter id="nodeGlow" x="-20%" y="-20%" width="140%" height="140%">
+    <filter id="pipeNodeGlow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="3" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over"/>
     </filter>
@@ -48,7 +48,7 @@
   <!-- Node 1: EXPLORE -->
   <g transform="translate(70, 55)">
     <circle cx="0" cy="0" r="18" fill="#121820" stroke="#30363D" stroke-width="1.5"/>
-    <circle cx="0" cy="0" r="6" fill="#00D2FF" filter="url(#nodeGlow)"/>
+    <circle cx="0" cy="0" r="6" fill="#00D2FF" filter="url(#pipeNodeGlow)"/>
     <text x="0" y="-28" text-anchor="middle" class="stage-num">01</text>
     <text x="0" y="36" text-anchor="middle" class="stage-title">EXPLORE</text>
   </g>
@@ -64,7 +64,7 @@
   <!-- Node 3: BUILD -->
   <g transform="translate(366, 55)">
     <circle cx="0" cy="0" r="18" fill="#121820" stroke="#00D2FF" stroke-width="1.5"/>
-    <circle cx="0" cy="0" r="6" fill="#00D2FF" filter="url(#nodeGlow)"/>
+    <circle cx="0" cy="0" r="6" fill="#00D2FF" filter="url(#pipeNodeGlow)"/>
     <text x="0" y="-28" text-anchor="middle" class="stage-num">03</text>
     <text x="0" y="36" text-anchor="middle" class="stage-title">BUILD</text>
   </g>
@@ -88,7 +88,7 @@
   <!-- Node 6: ITERATE -->
   <g transform="translate(810, 55)">
     <circle cx="0" cy="0" r="18" fill="#121820" stroke="#38EF7D" stroke-width="1.5"/>
-    <circle cx="0" cy="0" r="6" fill="#38EF7D" filter="url(#nodeGlow)"/>
+    <circle cx="0" cy="0" r="6" fill="#38EF7D" filter="url(#pipeNodeGlow)"/>
     <text x="0" y="-28" text-anchor="middle" class="stage-num" fill="#38EF7D">06</text>
     <text x="0" y="36" text-anchor="middle" class="stage-title" fill="#38EF7D">ITERATE</text>
   </g>
