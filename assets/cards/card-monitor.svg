@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 110" width="100%" height="110" fill="none">
+  <defs>
+    <linearGradient id="monBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070B10"/>
+      <stop offset="50%" stop-color="#0C121A"/>
+      <stop offset="100%" stop-color="#0E1624"/>
+    </linearGradient>
+    <linearGradient id="monAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00D2FF"/>
+      <stop offset="100%" stop-color="#38EF7D"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    @keyframes pulseWave {
+      0% { stroke-dashoffset: 160; }
+      100% { stroke-dashoffset: 0; }
+    }
+    @keyframes heartbeat {
+      0%, 100% { r: 3px; opacity: 0.6; }
+      20% { r: 5px; opacity: 1; filter: drop-shadow(0 0 4px #00D2FF); }
+      40% { r: 3.5px; opacity: 0.7; }
+      60% { r: 4.5px; opacity: 0.9; filter: drop-shadow(0 0 3px #00D2FF); }
+    }
+    .pulse-line {
+      stroke-dasharray: 40 120;
+      animation: pulseWave 3s linear infinite;
+    }
+    .heart-node {
+      animation: heartbeat 2s ease-in-out infinite;
+    }
+  </style>
+
+  <rect x="1" y="1" width="418" height="108" rx="10" fill="url(#monBg)" stroke="#21262D" stroke-width="1.2"/>
+  <line x1="1" y1="1" x2="419" y2="1" stroke="url(#monAccent)" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Left Content -->
+  <g transform="translate(22, 0)">
+    <text x="0" y="32" font-family="'SF Mono', 'Segoe UI Mono', Consolas, monospace" font-size="11" font-weight="700" fill="#00D2FF" letter-spacing="1.5px">03 // TELEMETRY &amp; DAEMONS</text>
+    <text x="0" y="60" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="19" font-weight="800" fill="#F0F6FC" letter-spacing="1.2px">smart-system-monitor</text>
+    <text x="0" y="78" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="500" fill="#8B949E" letter-spacing="0.2px">Cross-Platform Hardware Diagnostics &amp; Daemon Bot</text>
+    <g transform="translate(0, 92)">
+      <text font-family="'SF Mono', Consolas, monospace" font-size="9" font-weight="600" fill="#00D2FF">PYTHON</text>
+      <text x="44" font-family="sans-serif" font-size="9" fill="#484F58">•</text>
+      <text x="56" font-family="'SF Mono', Consolas, monospace" font-size="9" fill="#8B949E">PSUTIL</text>
+      <text x="100" font-family="sans-serif" font-size="9" fill="#484F58">•</text>
+      <text x="112" font-family="'SF Mono', Consolas, monospace" font-size="9" fill="#8B949E">TELEGRAM BOT API</text>
+    </g>
+  </g>
+
+  <!-- Right Graphic: Oscilloscope Waveform & Diagnostics Node -->
+  <g transform="translate(350, 55)">
+    <rect x="-36" y="-28" width="72" height="56" rx="6" fill="#0A1017" stroke="#21262D" stroke-width="1"/>
+    <!-- Grid lines -->
+    <line x1="-36" y1="0" x2="36" y2="0" stroke="#161B22" stroke-width="1"/>
+    <line x1="0" y1="-28" x2="0" y2="28" stroke="#161B22" stroke-width="1"/>
+
+    <!-- Waveform Track -->
+    <path d="M -32 0 L -18 0 L -12 -14 L -6 18 L 0 -10 L 6 10 L 12 0 L 32 0" stroke="#1F2A38" stroke-width="1.5" fill="none"/>
+    <path d="M -32 0 L -18 0 L -12 -14 L -6 18 L 0 -10 L 6 10 L 12 0 L 32 0" stroke="#00D2FF" stroke-width="1.8" fill="none" class="pulse-line"/>
+    <circle cx="0" cy="-10" r="3" fill="#38EF7D" class="heart-node"/>
+  </g>
+</svg>
