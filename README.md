@@ -57,4 +57,4 @@ Low-overhead host telemetry suite paired with an automated daemon bot for real-t
 
 ---
 
-**Connect:** [GitHub](https://github.com/Babul-kumar) · [LinkedIn](https://www.linkedin.com/in/babul-kumar) · [Email](mailto:bk7321634@gmail.com)
+**Connect:** [GitHub](https://github.com/Babul-kumar) · [LinkedIn](https://www.linkedin.com/in/babul-kumar2007/) · [Email](mailto:babulkumar0220@gmail.com)
