@@ -1,0 +1,462 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 220" width="100%" height="100%" role="img" aria-label="Babul Kumar — Animated Contribution Snake" style="background:#090C11; font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <filter id="snakeGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3.5" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+
+    <style><![CDATA[
+      @keyframes snakeMotion {
+        0%   { transform: translate(76px, 66px); }
+        15%  { transform: translate(380px, 66px); }
+        25%  { transform: translate(380px, 114px); }
+        40%  { transform: translate(720px, 114px); }
+        55%  { transform: translate(720px, 162px); }
+        75%  { transform: translate(1040px, 162px); }
+        85%  { transform: translate(1040px, 66px); }
+        95%  { transform: translate(840px, 66px); }
+        100% { transform: translate(76px, 66px); }
+      }
+
+      @keyframes snakeBody1 {
+        0%   { transform: translate(62px, 66px); }
+        15%  { transform: translate(366px, 66px); }
+        25%  { transform: translate(380px, 100px); }
+        40%  { transform: translate(706px, 114px); }
+        55%  { transform: translate(720px, 148px); }
+        75%  { transform: translate(1026px, 162px); }
+        85%  { transform: translate(1040px, 80px); }
+        95%  { transform: translate(854px, 66px); }
+        100% { transform: translate(62px, 66px); }
+      }
+
+      @keyframes snakeBody2 {
+        0%   { transform: translate(48px, 66px); }
+        15%  { transform: translate(352px, 66px); }
+        25%  { transform: translate(380px, 86px); }
+        40%  { transform: translate(692px, 114px); }
+        55%  { transform: translate(720px, 134px); }
+        75%  { transform: translate(1012px, 162px); }
+        85%  { transform: translate(1040px, 94px); }
+        95%  { transform: translate(868px, 66px); }
+        100% { transform: translate(48px, 66px); }
+      }
+
+      @keyframes snakeTail {
+        0%   { transform: translate(34px, 66px); }
+        15%  { transform: translate(338px, 66px); }
+        25%  { transform: translate(380px, 72px); }
+        40%  { transform: translate(678px, 114px); }
+        55%  { transform: translate(720px, 120px); }
+        75%  { transform: translate(998px, 162px); }
+        85%  { transform: translate(1040px, 108px); }
+        95%  { transform: translate(882px, 66px); }
+        100% { transform: translate(34px, 66px); }
+      }
+
+      .snake-head { animation: snakeMotion 18s ease-in-out infinite; }
+      .snake-seg-1 { animation: snakeBody1 18s ease-in-out infinite; }
+      .snake-seg-2 { animation: snakeBody2 18s ease-in-out infinite; }
+      .snake-tail  { animation: snakeTail 18s ease-in-out infinite; }
+    ]]></style>
+  </defs>
+
+  <rect width="1200" height="220" fill="#090C11" />
+  <rect x="36" y="16" width="1128" height="188" rx="6" fill="#0C1017" stroke="#1E293B" stroke-width="1" />
+
+  <!-- Technical Header -->
+  <text x="56" y="38" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="9" letter-spacing="1.5">10 // CONTRIBUTION SNAKE // AUTONOMOUS CALENDAR HARVESTER</text>
+  <text x="1144" y="38" text-anchor="end" fill="#00E5FF" font-family="'JetBrains Mono', monospace" font-size="9">ALGORITHM: GREEDY RECURSIVE PATHFINDER</text>
+
+  <!-- Background Contribution Grid -->
+  <g opacity="0.65">
+    <rect class="cell" x="76" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.30s both;" />
+      <rect class="cell" x="76" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.30s both;" />
+      <rect class="cell" x="76" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.30s both;" />
+      <rect class="cell" x="76" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.30s both;" />
+      <rect class="cell" x="76" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.30s both;" />
+      <rect class="cell" x="76" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.30s both;" />
+      <rect class="cell" x="76" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.30s both;" />
+      <rect class="cell" x="95" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.32s both;" />
+      <rect class="cell" x="95" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.32s both;" />
+      <rect class="cell" x="95" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.32s both;" />
+      <rect class="cell" x="95" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.32s both;" />
+      <rect class="cell" x="95" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.32s both;" />
+      <rect class="cell" x="95" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.32s both;" />
+      <rect class="cell" x="95" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.32s both;" />
+      <rect class="cell" x="114" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.34s both;" />
+      <rect class="cell" x="114" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.34s both;" />
+      <rect class="cell" x="114" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.34s both;" />
+      <rect class="cell" x="114" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.34s both;" />
+      <rect class="cell" x="114" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.34s both;" />
+      <rect class="cell" x="114" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.34s both;" />
+      <rect class="cell" x="114" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.34s both;" />
+      <rect class="cell" x="133" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.36s both;" />
+      <rect class="cell" x="133" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.36s both;" />
+      <rect class="cell" x="133" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.36s both;" />
+      <rect class="cell" x="133" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.36s both;" />
+      <rect class="cell" x="133" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.36s both;" />
+      <rect class="cell" x="133" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.36s both;" />
+      <rect class="cell" x="133" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.36s both;" />
+      <rect class="cell" x="152" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.38s both;" />
+      <rect class="cell" x="152" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.38s both;" />
+      <rect class="cell" x="152" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.38s both;" />
+      <rect class="cell" x="152" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.38s both;" />
+      <rect class="cell" x="152" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.38s both;" />
+      <rect class="cell" x="152" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.38s both;" />
+      <rect class="cell" x="152" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.38s both;" />
+      <rect class="cell" x="171" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.40s both;" />
+      <rect class="cell" x="171" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.40s both;" />
+      <rect class="cell" x="171" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.40s both;" />
+      <rect class="cell" x="171" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.40s both;" />
+      <rect class="cell" x="171" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.40s both;" />
+      <rect class="cell" x="171" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.40s both;" />
+      <rect class="cell" x="171" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.40s both;" />
+      <rect class="cell" x="190" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.42s both;" />
+      <rect class="cell" x="190" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.42s both;" />
+      <rect class="cell" x="190" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.42s both;" />
+      <rect class="cell" x="190" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.42s both;" />
+      <rect class="cell" x="190" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.42s both;" />
+      <rect class="cell" x="190" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.42s both;" />
+      <rect class="cell" x="190" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.42s both;" />
+      <rect class="cell" x="209" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.44s both;" />
+      <rect class="cell" x="209" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.44s both;" />
+      <rect class="cell" x="209" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.44s both;" />
+      <rect class="cell" x="209" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.44s both;" />
+      <rect class="cell" x="209" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.44s both;" />
+      <rect class="cell" x="209" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.44s both;" />
+      <rect class="cell" x="209" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.44s both;" />
+      <rect class="cell" x="228" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.46s both;" />
+      <rect class="cell" x="228" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.46s both;" />
+      <rect class="cell" x="228" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.46s both;" />
+      <rect class="cell" x="228" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.46s both;" />
+      <rect class="cell" x="228" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.46s both;" />
+      <rect class="cell" x="228" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.46s both;" />
+      <rect class="cell" x="228" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.46s both;" />
+      <rect class="cell" x="247" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.48s both;" />
+      <rect class="cell" x="247" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.48s both;" />
+      <rect class="cell" x="247" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.48s both;" />
+      <rect class="cell" x="247" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.48s both;" />
+      <rect class="cell" x="247" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.48s both;" />
+      <rect class="cell" x="247" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.48s both;" />
+      <rect class="cell" x="247" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.48s both;" />
+      <rect class="cell" x="266" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.50s both;" />
+      <rect class="cell" x="266" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.50s both;" />
+      <rect class="cell" x="266" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.50s both;" />
+      <rect class="cell" x="266" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.50s both;" />
+      <rect class="cell" x="266" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.50s both;" />
+      <rect class="cell" x="266" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.50s both;" />
+      <rect class="cell" x="266" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.50s both;" />
+      <rect class="cell" x="285" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.52s both;" />
+      <rect class="cell" x="285" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.52s both;" />
+      <rect class="cell" x="285" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.52s both;" />
+      <rect class="cell" x="285" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.52s both;" />
+      <rect class="cell" x="285" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.52s both;" />
+      <rect class="cell" x="285" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.52s both;" />
+      <rect class="cell" x="285" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.52s both;" />
+      <rect class="cell" x="304" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.54s both;" />
+      <rect class="cell" x="304" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.54s both;" />
+      <rect class="cell" x="304" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.54s both;" />
+      <rect class="cell" x="304" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.54s both;" />
+      <rect class="cell" x="304" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.54s both;" />
+      <rect class="cell" x="304" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.54s both;" />
+      <rect class="cell" x="304" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.54s both;" />
+      <rect class="cell" x="323" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.56s both;" />
+      <rect class="cell" x="323" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.56s both;" />
+      <rect class="cell" x="323" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.56s both;" />
+      <rect class="cell" x="323" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.56s both;" />
+      <rect class="cell" x="323" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.56s both;" />
+      <rect class="cell" x="323" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.56s both;" />
+      <rect class="cell" x="323" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.56s both;" />
+      <rect class="cell" x="342" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.58s both;" />
+      <rect class="cell" x="342" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.58s both;" />
+      <rect class="cell" x="342" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.58s both;" />
+      <rect class="cell" x="342" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.58s both;" />
+      <rect class="cell" x="342" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.58s both;" />
+      <rect class="cell" x="342" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.58s both;" />
+      <rect class="cell" x="342" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.58s both;" />
+      <rect class="cell" x="361" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.60s both;" />
+      <rect class="cell" x="361" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.60s both;" />
+      <rect class="cell" x="361" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.60s both;" />
+      <rect class="cell" x="361" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.60s both;" />
+      <rect class="cell" x="361" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.60s both;" />
+      <rect class="cell" x="361" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.60s both;" />
+      <rect class="cell" x="361" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.60s both;" />
+      <rect class="cell" x="380" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.62s both;" />
+      <rect class="cell" x="380" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.62s both;" />
+      <rect class="cell" x="380" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.62s both;" />
+      <rect class="cell" x="380" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.62s both;" />
+      <rect class="cell" x="380" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.62s both;" />
+      <rect class="cell" x="380" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.62s both;" />
+      <rect class="cell" x="380" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.62s both;" />
+      <rect class="cell" x="399" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.64s both;" />
+      <rect class="cell" x="399" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.64s both;" />
+      <rect class="cell" x="399" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.64s both;" />
+      <rect class="cell" x="399" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.64s both;" />
+      <rect class="cell" x="399" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.64s both;" />
+      <rect class="cell" x="399" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.64s both;" />
+      <rect class="cell" x="399" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.64s both;" />
+      <rect class="cell" x="418" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.66s both;" />
+      <rect class="cell" x="418" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.66s both;" />
+      <rect class="cell" x="418" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.66s both;" />
+      <rect class="cell" x="418" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.66s both;" />
+      <rect class="cell" x="418" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.66s both;" />
+      <rect class="cell" x="418" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.66s both;" />
+      <rect class="cell" x="418" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.66s both;" />
+      <rect class="cell" x="437" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.68s both;" />
+      <rect class="cell" x="437" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.68s both;" />
+      <rect class="cell" x="437" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.68s both;" />
+      <rect class="cell" x="437" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.68s both;" />
+      <rect class="cell" x="437" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.68s both;" />
+      <rect class="cell" x="437" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.68s both;" />
+      <rect class="cell" x="437" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.68s both;" />
+      <rect class="cell" x="456" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.70s both;" />
+      <rect class="cell" x="456" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.70s both;" />
+      <rect class="cell" x="456" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.70s both;" />
+      <rect class="cell" x="456" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.70s both;" />
+      <rect class="cell" x="456" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.70s both;" />
+      <rect class="cell" x="456" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.70s both;" />
+      <rect class="cell" x="456" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.70s both;" />
+      <rect class="cell" x="475" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.72s both;" />
+      <rect class="cell" x="475" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.72s both;" />
+      <rect class="cell" x="475" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.72s both;" />
+      <rect class="cell" x="475" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.72s both;" />
+      <rect class="cell" x="475" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.72s both;" />
+      <rect class="cell" x="475" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.72s both;" />
+      <rect class="cell" x="475" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.72s both;" />
+      <rect class="cell" x="494" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.74s both;" />
+      <rect class="cell" x="494" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.74s both;" />
+      <rect class="cell" x="494" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.74s both;" />
+      <rect class="cell" x="494" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.74s both;" />
+      <rect class="cell" x="494" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.74s both;" />
+      <rect class="cell" x="494" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.74s both;" />
+      <rect class="cell" x="494" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.74s both;" />
+      <rect class="cell" x="513" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.76s both;" />
+      <rect class="cell" x="513" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.76s both;" />
+      <rect class="cell" x="513" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.76s both;" />
+      <rect class="cell" x="513" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.76s both;" />
+      <rect class="cell" x="513" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.76s both;" />
+      <rect class="cell" x="513" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.76s both;" />
+      <rect class="cell" x="513" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.76s both;" />
+      <rect class="cell" x="532" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.78s both;" />
+      <rect class="cell" x="532" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.78s both;" />
+      <rect class="cell" x="532" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.78s both;" />
+      <rect class="cell" x="532" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.78s both;" />
+      <rect class="cell" x="532" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.78s both;" />
+      <rect class="cell" x="532" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.78s both;" />
+      <rect class="cell" x="532" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.78s both;" />
+      <rect class="cell" x="551" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.80s both;" />
+      <rect class="cell" x="551" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.80s both;" />
+      <rect class="cell" x="551" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.80s both;" />
+      <rect class="cell" x="551" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.80s both;" />
+      <rect class="cell" x="551" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.80s both;" />
+      <rect class="cell" x="551" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.80s both;" />
+      <rect class="cell" x="551" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.80s both;" />
+      <rect class="cell" x="570" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.82s both;" />
+      <rect class="cell" x="570" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.82s both;" />
+      <rect class="cell" x="570" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.82s both;" />
+      <rect class="cell" x="570" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.82s both;" />
+      <rect class="cell" x="570" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.82s both;" />
+      <rect class="cell" x="570" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.82s both;" />
+      <rect class="cell" x="570" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.82s both;" />
+      <rect class="cell" x="589" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.84s both;" />
+      <rect class="cell" x="589" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.84s both;" />
+      <rect class="cell" x="589" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.84s both;" />
+      <rect class="cell" x="589" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.84s both;" />
+      <rect class="cell" x="589" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.84s both;" />
+      <rect class="cell" x="589" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.84s both;" />
+      <rect class="cell" x="589" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.84s both;" />
+      <rect class="cell" x="608" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.86s both;" />
+      <rect class="cell" x="608" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.86s both;" />
+      <rect class="cell" x="608" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.86s both;" />
+      <rect class="cell" x="608" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.86s both;" />
+      <rect class="cell" x="608" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.86s both;" />
+      <rect class="cell" x="608" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.86s both;" />
+      <rect class="cell" x="608" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.86s both;" />
+      <rect class="cell" x="627" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.88s both;" />
+      <rect class="cell" x="627" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.88s both;" />
+      <rect class="cell" x="627" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.88s both;" />
+      <rect class="cell" x="627" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.88s both;" />
+      <rect class="cell" x="627" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.88s both;" />
+      <rect class="cell" x="627" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.88s both;" />
+      <rect class="cell" x="627" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.88s both;" />
+      <rect class="cell" x="646" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.90s both;" />
+      <rect class="cell" x="646" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.90s both;" />
+      <rect class="cell" x="646" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.90s both;" />
+      <rect class="cell" x="646" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.90s both;" />
+      <rect class="cell" x="646" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.90s both;" />
+      <rect class="cell" x="646" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.90s both;" />
+      <rect class="cell" x="646" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.90s both;" />
+      <rect class="cell" x="665" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.92s both;" />
+      <rect class="cell" x="665" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.92s both;" />
+      <rect class="cell" x="665" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.92s both;" />
+      <rect class="cell" x="665" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.92s both;" />
+      <rect class="cell" x="665" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.92s both;" />
+      <rect class="cell" x="665" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.92s both;" />
+      <rect class="cell" x="665" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.92s both;" />
+      <rect class="cell" x="684" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.94s both;" />
+      <rect class="cell" x="684" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.94s both;" />
+      <rect class="cell" x="684" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.94s both;" />
+      <rect class="cell" x="684" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.94s both;" />
+      <rect class="cell" x="684" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.94s both;" />
+      <rect class="cell" x="684" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.94s both;" />
+      <rect class="cell" x="684" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.94s both;" />
+      <rect class="cell" x="703" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.96s both;" />
+      <rect class="cell" x="703" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.96s both;" />
+      <rect class="cell" x="703" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.96s both;" />
+      <rect class="cell" x="703" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.96s both;" />
+      <rect class="cell" x="703" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.96s both;" />
+      <rect class="cell" x="703" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.96s both;" />
+      <rect class="cell" x="703" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.96s both;" />
+      <rect class="cell" x="722" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.98s both;" />
+      <rect class="cell" x="722" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.98s both;" />
+      <rect class="cell" x="722" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.98s both;" />
+      <rect class="cell" x="722" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.98s both;" />
+      <rect class="cell" x="722" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.98s both;" />
+      <rect class="cell" x="722" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.98s both;" />
+      <rect class="cell" x="722" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 0.98s both;" />
+      <rect class="cell" x="741" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.00s both;" />
+      <rect class="cell" x="741" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.00s both;" />
+      <rect class="cell" x="741" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.00s both;" />
+      <rect class="cell" x="741" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.00s both;" />
+      <rect class="cell" x="741" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.00s both;" />
+      <rect class="cell" x="741" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.00s both;" />
+      <rect class="cell" x="741" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.00s both;" />
+      <rect class="cell" x="760" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.02s both;" />
+      <rect class="cell" x="760" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.02s both;" />
+      <rect class="cell" x="760" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.02s both;" />
+      <rect class="cell" x="760" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.02s both;" />
+      <rect class="cell" x="760" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.02s both;" />
+      <rect class="cell" x="760" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.02s both;" />
+      <rect class="cell" x="760" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.02s both;" />
+      <rect class="cell" x="779" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.04s both;" />
+      <rect class="cell" x="779" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.04s both;" />
+      <rect class="cell" x="779" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.04s both;" />
+      <rect class="cell" x="779" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.04s both;" />
+      <rect class="cell" x="779" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.04s both;" />
+      <rect class="cell" x="779" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.04s both;" />
+      <rect class="cell" x="779" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.04s both;" />
+      <rect class="cell" x="798" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.06s both;" />
+      <rect class="cell" x="798" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.06s both;" />
+      <rect class="cell" x="798" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.06s both;" />
+      <rect class="cell" x="798" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.06s both;" />
+      <rect class="cell" x="798" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.06s both;" />
+      <rect class="cell" x="798" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.06s both;" />
+      <rect class="cell" x="798" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.06s both;" />
+      <rect class="cell" x="817" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.08s both;" />
+      <rect class="cell" x="817" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.08s both;" />
+      <rect class="cell" x="817" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.08s both;" />
+      <rect class="cell" x="817" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.08s both;" />
+      <rect class="cell" x="817" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.08s both;" />
+      <rect class="cell" x="817" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.08s both;" />
+      <rect class="cell" x="817" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.08s both;" />
+      <rect class="cell" x="836" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.10s both;" />
+      <rect class="cell" x="836" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.10s both;" />
+      <rect class="cell" x="836" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.10s both;" />
+      <rect class="cell" x="836" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.10s both;" />
+      <rect class="cell" x="836" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.10s both;" />
+      <rect class="cell" x="836" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.10s both;" />
+      <rect class="cell" x="836" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.10s both;" />
+      <rect class="cell" x="855" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.12s both;" />
+      <rect class="cell" x="855" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.12s both;" />
+      <rect class="cell" x="855" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.12s both;" />
+      <rect class="cell" x="855" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.12s both;" />
+      <rect class="cell" x="855" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.12s both;" />
+      <rect class="cell" x="855" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.12s both;" />
+      <rect class="cell" x="855" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.12s both;" />
+      <rect class="cell" x="874" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.14s both;" />
+      <rect class="cell" x="874" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.14s both;" />
+      <rect class="cell" x="874" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.14s both;" />
+      <rect class="cell" x="874" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.14s both;" />
+      <rect class="cell" x="874" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.14s both;" />
+      <rect class="cell" x="874" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.14s both;" />
+      <rect class="cell" x="874" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.14s both;" />
+      <rect class="cell" x="893" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.16s both;" />
+      <rect class="cell" x="893" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.16s both;" />
+      <rect class="cell" x="893" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.16s both;" />
+      <rect class="cell" x="893" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.16s both;" />
+      <rect class="cell" x="893" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.16s both;" />
+      <rect class="cell" x="893" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.16s both;" />
+      <rect class="cell" x="893" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.16s both;" />
+      <rect class="cell" x="912" y="66" width="14" height="12" rx="2.5" fill="#0E4429" opacity="0.95" style="animation: cellReveal 0.4s ease 1.18s both;" />
+      <rect class="cell" x="912" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.18s both;" />
+      <rect class="cell" x="912" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.18s both;" />
+      <rect class="cell" x="912" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.18s both;" />
+      <rect class="cell" x="912" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.18s both;" />
+      <rect class="cell" x="912" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.18s both;" />
+      <rect class="cell" x="912" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.18s both;" />
+      <rect class="cell" x="931" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.20s both;" />
+      <rect class="cell" x="931" y="82" width="14" height="12" rx="2.5" fill="#006D32" opacity="1.0" style="animation: cellReveal 0.4s ease 1.20s both;" />
+      <rect class="cell" x="931" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.20s both;" />
+      <rect class="cell" x="931" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.20s both;" />
+      <rect class="cell" x="931" y="130" width="14" height="12" rx="2.5" fill="#0E4429" opacity="0.95" style="animation: cellReveal 0.4s ease 1.20s both;" />
+      <rect class="cell" x="931" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.20s both;" />
+      <rect class="cell" x="931" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.20s both;" />
+      <rect class="cell" x="950" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.22s both;" />
+      <rect class="cell" x="950" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.22s both;" />
+      <rect class="cell" x="950" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.22s both;" />
+      <rect class="cell" x="950" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.22s both;" />
+      <rect class="cell" x="950" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.22s both;" />
+      <rect class="cell" x="950" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.22s both;" />
+      <rect class="cell" x="950" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.22s both;" />
+      <rect class="cell" x="969" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.24s both;" />
+      <rect class="cell" x="969" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.24s both;" />
+      <rect class="cell" x="969" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.24s both;" />
+      <rect class="cell" x="969" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.24s both;" />
+      <rect class="cell" x="969" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.24s both;" />
+      <rect class="cell" x="969" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.24s both;" />
+      <rect class="cell" x="969" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.24s both;" />
+      <rect class="cell" x="988" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.26s both;" />
+      <rect class="cell" x="988" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.26s both;" />
+      <rect class="cell" x="988" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.26s both;" />
+      <rect class="cell" x="988" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.26s both;" />
+      <rect class="cell" x="988" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.26s both;" />
+      <rect class="cell" x="988" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.26s both;" />
+      <rect class="cell" x="988" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.26s both;" />
+      <rect class="cell" x="1007" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.28s both;" />
+      <rect class="cell" x="1007" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.28s both;" />
+      <rect class="cell" x="1007" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.28s both;" />
+      <rect class="cell" x="1007" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.28s both;" />
+      <rect class="cell" x="1007" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.28s both;" />
+      <rect class="cell" x="1007" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.28s both;" />
+      <rect class="cell" x="1007" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.28s both;" />
+      <rect class="cell" x="1026" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.30s both;" />
+      <rect class="cell" x="1026" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.30s both;" />
+      <rect class="cell" x="1026" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.30s both;" />
+      <rect class="cell" x="1026" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.30s both;" />
+      <rect class="cell" x="1026" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.30s both;" />
+      <rect class="cell" x="1026" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.30s both;" />
+      <rect class="cell" x="1026" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.30s both;" />
+      <rect class="cell" x="1045" y="66" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.32s both;" />
+      <rect class="cell" x="1045" y="82" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.32s both;" />
+      <rect class="cell" x="1045" y="98" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.32s both;" />
+      <rect class="cell" x="1045" y="114" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.32s both;" />
+      <rect class="cell" x="1045" y="130" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.32s both;" />
+      <rect class="cell" x="1045" y="146" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.32s both;" />
+      <rect class="cell" x="1045" y="162" width="14" height="12" rx="2.5" fill="#161B22" opacity="0.7" style="animation: cellReveal 0.4s ease 1.32s both;" />
+      
+  </g>
+
+  <!-- THE ANIMATED SNAKE -->
+  <!-- Tail -->
+  <rect class="snake-tail" x="0" y="0" width="14" height="12" rx="2.5" fill="#00B4D8" opacity="0.5" />
+  <!-- Body 2 -->
+  <rect class="snake-seg-2" x="0" y="0" width="14" height="12" rx="2.5" fill="#00E5FF" opacity="0.75" />
+  <!-- Body 1 -->
+  <rect class="snake-seg-1" x="0" y="0" width="14" height="12" rx="2.5" fill="#38BDF8" opacity="0.9" />
+  <!-- Head with Glow -->
+  <g class="snake-head">
+    <rect x="0" y="0" width="14" height="12" rx="3" fill="#FFFFFF" filter="url(#snakeGlow)" />
+    <circle cx="4" cy="4" r="1.5" fill="#090C11" />
+    <circle cx="10" cy="4" r="1.5" fill="#090C11" />
+  </g>
+
+  <!-- Live Status Line -->
+  <g transform="translate(56, 186)" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#64748B">
+    <circle cx="6" cy="-3" r="3.5" fill="#10B981" />
+    <text x="16" y="0">HARVESTING REAL CONTRIBUTION NODES &#8226; TOTAL HARVESTED: 248 COMMITS</text>
+  </g>
+</svg>

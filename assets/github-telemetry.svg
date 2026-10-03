@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" width="100%" height="100%" role="img" aria-label="Babul Kumar — GitHub Telemetry" style="background:#090C11; font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <linearGradient id="barPython" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#0284C7" />
+    </linearGradient>
+    <linearGradient id="barTS" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3178C6" />
+      <stop offset="100%" stop-color="#2563EB" />
+    </linearGradient>
+    <linearGradient id="barJS" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F7DF1E" />
+      <stop offset="100%" stop-color="#CA8A04" />
+    </linearGradient>
+    <linearGradient id="barOther" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A855F7" />
+      <stop offset="100%" stop-color="#7C3AED" />
+    </linearGradient>
+
+    <style><![CDATA[
+      .metric-card {
+        transition: transform 0.2s ease;
+      }
+      .anim-bar-py { animation: barGrow 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
+      @keyframes barGrow {
+        from { width: 0; }
+      }
+    ]]></style>
+  </defs>
+
+  <rect width="1200" height="280" fill="#090C11" />
+  <rect x="36" y="16" width="1128" height="248" rx="6" fill="#0C1017" stroke="#1E293B" stroke-width="1" />
+
+  <!-- Header -->
+  <text x="56" y="38" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="9" letter-spacing="1.5">08 // GITHUB TELEMETRY &amp; LIVE ACTIVITY METRICS</text>
+  <text x="1144" y="38" text-anchor="end" fill="#00E5FF" font-family="'JetBrains Mono', monospace" font-size="9">SOURCE: GITHUB PUBLIC API // LIVE SYNC</text>
+
+  <!-- METRIC 1: Public Repositories -->
+  <g class="metric-card" transform="translate(60, 60)">
+    <rect x="0" y="0" width="250" height="100" rx="5" fill="#0F141F" stroke="#1E293B" stroke-width="1" />
+    <text x="20" y="28" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="10.5">PUBLIC REPOSITORIES</text>
+    <text x="20" y="68" fill="#F1F5F9" font-size="34" font-weight="800">27</text>
+    <text x="82" y="64" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="11">ACTIVE REPOS</text>
+    <text x="20" y="88" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="9.5">AI/ML &#8226; Systems &#8226; Full-Stack</text>
+  </g>
+
+  <!-- METRIC 2: Total Contributions -->
+  <g class="metric-card" transform="translate(330, 60)">
+    <rect x="0" y="0" width="250" height="100" rx="5" fill="#0F141F" stroke="#1E293B" stroke-width="1" />
+    <text x="20" y="28" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="10.5">LIFETIME CONTRIBUTIONS</text>
+    <text x="20" y="68" fill="#F1F5F9" font-size="34" font-weight="800">248+</text>
+    <text x="120" y="64" fill="#10B981" font-family="'JetBrains Mono', monospace" font-size="11">+221 IN 2026</text>
+    <text x="20" y="88" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="9.5">Verified GitHub Activity Record</text>
+  </g>
+
+  <!-- METRIC 3: Primary Languages -->
+  <g class="metric-card" transform="translate(600, 60)">
+    <rect x="0" y="0" width="250" height="100" rx="5" fill="#0F141F" stroke="#1E293B" stroke-width="1" />
+    <text x="20" y="28" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="10.5">CORE ECOSYSTEM</text>
+    <text x="20" y="58" fill="#F1F5F9" font-size="16" font-weight="700">Python &#8226; TypeScript</text>
+    <text x="20" y="76" fill="#94A3B8" font-size="12">JavaScript &#8226; C/C++ &#8226; SQL</text>
+    <text x="20" y="92" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="9.5">Across 27 public codebases</text>
+  </g>
+
+  <!-- METRIC 4: Account Status -->
+  <g class="metric-card" transform="translate(870, 60)">
+    <rect x="0" y="0" width="270" height="100" rx="5" fill="#0F141F" stroke="#1E293B" stroke-width="1" />
+    <text x="20" y="28" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="10.5">ACCOUNT TELEMETRY</text>
+    <circle cx="28" cy="56" r="4.5" fill="#10B981" />
+    <text x="40" y="60" fill="#F1F5F9" font-size="14" font-weight="600">Active Builder</text>
+    <text x="20" y="80" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="10">Joined: Nov 2024</text>
+    <text x="140" y="80" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="10">Followers: 5</text>
+  </g>
+
+  <!-- LOWER BAR: REPOSITORY LANGUAGE DISTRIBUTION -->
+  <g transform="translate(60, 180)">
+    <text x="0" y="0" fill="#94A3B8" font-family="'JetBrains Mono', monospace" font-size="10" letter-spacing="1">PUBLIC CODE REPOSITORY LANGUAGE COMPOSITION</text>
+    <text x="1080" y="0" text-anchor="end" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="9.5">27 REPOSITORIES TOTAL</text>
+    
+    <g transform="translate(0, 12)">
+      <rect x="0" y="0" width="440" height="14" rx="2" fill="url(#barPython)" />
+      <rect x="444" y="0" width="200" height="14" rx="2" fill="url(#barTS)" />
+      <rect x="648" y="0" width="200" height="14" rx="2" fill="url(#barJS)" />
+      <rect x="852" y="0" width="228" height="14" rx="2" fill="url(#barOther)" />
+    </g>
+
+    <!-- Legend -->
+    <g font-family="'JetBrains Mono', monospace" font-size="10" transform="translate(0, 48)">
+      <circle cx="6" cy="0" r="4.5" fill="#38BDF8" />
+      <text x="18" y="3" fill="#F1F5F9">Python <tspan fill="#64748B">(40.7% · 11 repos)</tspan></text>
+
+      <circle cx="280" cy="0" r="4.5" fill="#3178C6" />
+      <text x="292" y="3" fill="#F1F5F9">TypeScript <tspan fill="#64748B">(18.5% · 5 repos)</tspan></text>
+
+      <circle cx="560" cy="0" r="4.5" fill="#F7DF1E" />
+      <text x="572" y="3" fill="#F1F5F9">JavaScript <tspan fill="#64748B">(18.5% · 5 repos)</tspan></text>
+
+      <circle cx="840" cy="0" r="4.5" fill="#A855F7" />
+      <text x="852" y="3" fill="#F1F5F9">Other / Notebooks <tspan fill="#64748B">(22.2% · 6 repos)</tspan></text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 210" width="100%" height="100%" role="img" aria-label="Babul Kumar — Engineering Journey Timeline" style="background:#090C11; font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.3" />
+      <stop offset="50%" stop-color="#00E5FF" />
+      <stop offset="100%" stop-color="#6366F1" />
+    </linearGradient>
+
+    <style><![CDATA[
+      .timeline-base {
+        stroke-dasharray: 1040;
+        stroke-dashoffset: 1040;
+        animation: drawLine 1.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
+      }
+      .node-1 { opacity: 0; animation: nodePop 0.5s ease 0.6s forwards; }
+      .node-2 { opacity: 0; animation: nodePop 0.5s ease 1.1s forwards; }
+      .node-3 { opacity: 0; animation: nodePop 0.5s ease 1.6s forwards; }
+      
+      .pulse-glow { animation: pulseAnim 2.5s infinite; }
+
+      @keyframes drawLine {
+        to { stroke-dashoffset: 0; }
+      }
+      @keyframes nodePop {
+        0% { opacity: 0; transform: translateY(6px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes pulseAnim {
+        0%, 100% { r: 5; opacity: 1; }
+        50% { r: 8; opacity: 0.4; }
+      }
+    ]]></style>
+  </defs>
+
+  <rect width="1200" height="210" fill="#090C11" />
+  <rect x="36" y="16" width="1128" height="178" rx="6" fill="#0C1017" stroke="#1E293B" stroke-width="1" />
+
+  <!-- Technical Header -->
+  <text x="56" y="38" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="9" letter-spacing="1.5">02 // PROGRESSION TIMELINE &amp; ARCHITECTURAL MILESTONES</text>
+  <text x="1144" y="38" text-anchor="end" fill="#00E5FF" font-family="'JetBrains Mono', monospace" font-size="9">CHRONO-SERIES // 2024 - 2026</text>
+
+  <!-- Horizontal Axis Line -->
+  <line class="timeline-base" x1="80" y1="84" x2="1120" y2="84" stroke="url(#lineGrad)" stroke-width="2" />
+
+  <!-- MILESTONE 1: 2024 -->
+  <g class="node-1" transform="translate(140, 0)">
+    <line x1="0" y1="84" x2="0" y2="70" stroke="#00E5FF" stroke-width="1" stroke-dasharray="2 2" />
+    <circle cx="0" cy="84" r="5" fill="#00E5FF" />
+    <circle class="pulse-glow" cx="0" cy="84" r="6" fill="none" stroke="#00E5FF" stroke-width="1.5" />
+    <text x="0" y="62" text-anchor="middle" fill="#00E5FF" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">2024</text>
+    
+    <text x="0" y="112" text-anchor="middle" fill="#F1F5F9" font-size="13" font-weight="600">Foundations &amp; First Repositories</text>
+    <text x="0" y="130" text-anchor="middle" fill="#94A3B8" font-size="11">Computer Science &amp; Engineering journey begins</text>
+    <text x="0" y="146" text-anchor="middle" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="10">Core Algorithms &#8226; C/C++ &#8226; Basic Web Utilities</text>
+  </g>
+
+  <!-- MILESTONE 2: 2025 -->
+  <g class="node-2" transform="translate(560, 0)">
+    <line x1="0" y1="84" x2="0" y2="70" stroke="#38BDF8" stroke-width="1" stroke-dasharray="2 2" />
+    <circle cx="0" cy="84" r="5" fill="#38BDF8" />
+    <circle class="pulse-glow" cx="0" cy="84" r="6" fill="none" stroke="#38BDF8" stroke-width="1.5" />
+    <text x="0" y="62" text-anchor="middle" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">2025</text>
+    
+    <text x="0" y="112" text-anchor="middle" fill="#F1F5F9" font-size="13" font-weight="600">Systems, Simulators &amp; Cryptography</text>
+    <text x="0" y="130" text-anchor="middle" fill="#94A3B8" font-size="11">Steganography encoder, OS Virtual Memory &amp; PageSim</text>
+    <text x="0" y="146" text-anchor="middle" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="10">TypeScript &#8226; Canvas API &#8226; OS Paging Simulators</text>
+  </g>
+
+  <!-- MILESTONE 3: 2026 -->
+  <g class="node-3" transform="translate(980, 0)">
+    <line x1="0" y1="84" x2="0" y2="70" stroke="#6366F1" stroke-width="1" stroke-dasharray="2 2" />
+    <circle cx="0" cy="84" r="5" fill="#6366F1" />
+    <circle class="pulse-glow" cx="0" cy="84" r="6" fill="none" stroke="#6366F1" stroke-width="1.5" />
+    <text x="0" y="62" text-anchor="middle" fill="#818CF8" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700">2026 // ACTIVE</text>
+    
+    <text x="0" y="112" text-anchor="middle" fill="#F1F5F9" font-size="13" font-weight="600">AI Perception &amp; Telemetry Daemons</text>
+    <text x="0" y="130" text-anchor="middle" fill="#94A3B8" font-size="11">220+ contributions: Emotion detector &amp; System Bot</text>
+    <text x="0" y="146" text-anchor="middle" fill="#818CF8" font-family="'JetBrains Mono', monospace" font-size="10">Python &#8226; OpenCV &#8226; CNNs &#8226; Prometheus-EBM SDK</text>
+  </g>
+</svg>

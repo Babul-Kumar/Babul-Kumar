@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 260" width="100%" height="100%" role="img" aria-label="Babul Kumar — Systems Architecture Pipeline" style="background:#090C11; font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <linearGradient id="flowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00E5FF" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#38BDF8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#6366F1" stop-opacity="0.9" />
+    </linearGradient>
+
+    <style><![CDATA[
+      .flow-path {
+        stroke-dasharray: 8 6;
+        animation: flowAnimation 1.6s linear infinite;
+      }
+      .node-box {
+        transition: all 0.3s ease;
+      }
+      .pulse-ring {
+        animation: pulseRing 3s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+      }
+      @keyframes flowAnimation {
+        from { stroke-dashoffset: 28; }
+        to { stroke-dashoffset: 0; }
+      }
+      @keyframes pulseRing {
+        0% { transform: scale(0.96); opacity: 0.9; }
+        50% { transform: scale(1.03); opacity: 0.4; }
+        100% { transform: scale(0.96); opacity: 0.9; }
+      }
+    ]]></style>
+  </defs>
+
+  <rect width="1200" height="260" fill="#090C11" />
+  <rect x="36" y="16" width="1128" height="228" rx="6" fill="#0C1017" stroke="#1E293B" stroke-width="1" />
+
+  <!-- Header -->
+  <text x="56" y="38" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="9" letter-spacing="1.5">05 // ARCHITECTURE PIPELINE // REAL-TIME VISION &amp; SYSTEM TELEMETRY</text>
+  <text x="1144" y="38" text-anchor="end" fill="#00E5FF" font-family="'JetBrains Mono', monospace" font-size="9">PIPELINE: STREAM &#8594; TENSOR &#8594; INFERENCE &#8594; ACTION</text>
+
+  <!-- Connecting Stream Lines -->
+  <g stroke="url(#flowGrad)" stroke-width="2" fill="none">
+    <path class="flow-path" d="M 230 134 L 278 134" />
+    <path class="flow-path" d="M 458 134 L 506 134" />
+    <path class="flow-path" d="M 686 134 L 734 134" />
+    <path class="flow-path" d="M 914 134 L 962 134" />
+  </g>
+
+  <!-- NODE 1: INPUT STREAM -->
+  <g transform="translate(60, 68)">
+    <rect class="node-box" x="0" y="0" width="170" height="132" rx="5" fill="#0F141F" stroke="#1E293B" stroke-width="1" />
+    <path d="M 0 0 h 30 v 30 h -30 Z" fill="#00E5FF" fill-opacity="0.08" />
+    <text x="14" y="20" fill="#00E5FF" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">01</text>
+    <text x="40" y="20" fill="#F1F5F9" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="600">INPUT SOURCE</text>
+    
+    <text x="14" y="56" fill="#FFFFFF" font-size="12.5" font-weight="600">Live Video &amp; Host</text>
+    <text x="14" y="74" fill="#94A3B8" font-size="10.5">Camera feed / OS Metrics</text>
+    <text x="14" y="92" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="9.5">30 FPS Stream / Kernel Proc</text>
+    <rect x="14" y="106" width="142" height="16" rx="3" fill="#1E293B" />
+    <text x="20" y="118" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="8.5">SRC: OpenCV / psutil</text>
+  </g>
+
+  <!-- NODE 2: PRE-PROCESSING -->
+  <g transform="translate(288, 68)">
+    <rect class="node-box" x="0" y="0" width="170" height="132" rx="5" fill="#0F141F" stroke="#1E293B" stroke-width="1" />
+    <path d="M 0 0 h 30 v 30 h -30 Z" fill="#38BDF8" fill-opacity="0.08" />
+    <text x="14" y="20" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">02</text>
+    <text x="40" y="20" fill="#F1F5F9" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="600">PRE-PROCESSING</text>
+    
+    <text x="14" y="56" fill="#FFFFFF" font-size="12.5" font-weight="600">Normalization</text>
+    <text x="14" y="74" fill="#94A3B8" font-size="10.5">Grayscale ROI / Resizing</text>
+    <text x="14" y="92" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="9.5">Haar Cascade / Buffer Ring</text>
+    <rect x="14" y="106" width="142" height="16" rx="3" fill="#1E293B" />
+    <text x="20" y="118" fill="#38BDF8" font-family="'JetBrains Mono', monospace" font-size="8.5">SHAPE: [N, 48, 48, 1]</text>
+  </g>
+
+  <!-- NODE 3: MODEL & LOGIC -->
+  <g transform="translate(516, 68)">
+    <rect class="node-box" x="0" y="0" width="170" height="132" rx="5" fill="#0F141F" stroke="#00E5FF" stroke-opacity="0.6" stroke-width="1.2" />
+    <path d="M 0 0 h 30 v 30 h -30 Z" fill="#00E5FF" fill-opacity="0.12" />
+    <text x="14" y="20" fill="#00E5FF" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">03</text>
+    <text x="40" y="20" fill="#F1F5F9" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="600">INFERENCE ENGINE</text>
+    
+    <text x="14" y="56" fill="#FFFFFF" font-size="12.5" font-weight="600">Multi-Task CNN</text>
+    <text x="14" y="74" fill="#94A3B8" font-size="10.5">Softmax Emotion &amp; Age</text>
+    <text x="14" y="92" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="9.5">Forward Pass: &lt; 18ms</text>
+    <rect x="14" y="106" width="142" height="16" rx="3" fill="#1E293B" />
+    <text x="20" y="118" fill="#10B981" font-family="'JetBrains Mono', monospace" font-size="8.5">CONFIDENCE: OPTIMIZED</text>
+  </g>
+
+  <!-- NODE 4: DISPATCH / DECISION -->
+  <g transform="translate(744, 68)">
+    <rect class="node-box" x="0" y="0" width="170" height="132" rx="5" fill="#0F141F" stroke="#1E293B" stroke-width="1" />
+    <path d="M 0 0 h 30 v 30 h -30 Z" fill="#6366F1" fill-opacity="0.08" />
+    <text x="14" y="20" fill="#818CF8" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">04</text>
+    <text x="40" y="20" fill="#F1F5F9" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="600">EVENT DISPATCH</text>
+    
+    <text x="14" y="56" fill="#FFFFFF" font-size="12.5" font-weight="600">Threshold Filter</text>
+    <text x="14" y="74" fill="#94A3B8" font-size="10.5">Smoothing &amp; Alert Engine</text>
+    <text x="14" y="92" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="9.5">State machine evaluator</text>
+    <rect x="14" y="106" width="142" height="16" rx="3" fill="#1E293B" />
+    <text x="20" y="118" fill="#818CF8" font-family="'JetBrains Mono', monospace" font-size="8.5">EVENT: BOT DISPATCH</text>
+  </g>
+
+  <!-- NODE 5: CONSUMER / OUTPUT -->
+  <g transform="translate(972, 68)">
+    <rect class="node-box" x="0" y="0" width="170" height="132" rx="5" fill="#0F141F" stroke="#1E293B" stroke-width="1" />
+    <path d="M 0 0 h 30 v 30 h -30 Z" fill="#10B981" fill-opacity="0.08" />
+    <text x="14" y="20" fill="#10B981" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700">05</text>
+    <text x="40" y="20" fill="#F1F5F9" font-family="'JetBrains Mono', monospace" font-size="10.5" font-weight="600">OUTPUT / HUD</text>
+    
+    <text x="14" y="56" fill="#FFFFFF" font-size="12.5" font-weight="600">Overlay &amp; Notification</text>
+    <text x="14" y="74" fill="#94A3B8" font-size="10.5">Real-time bounding box</text>
+    <text x="14" y="92" fill="#64748B" font-family="'JetBrains Mono', monospace" font-size="9.5">Telegram / Web UI alert</text>
+    <rect x="14" y="106" width="142" height="16" rx="3" fill="#1E293B" />
+    <text x="20" y="118" fill="#10B981" font-family="'JetBrains Mono', monospace" font-size="8.5">STATUS: EMITTED</text>
+  </g>
+</svg>
